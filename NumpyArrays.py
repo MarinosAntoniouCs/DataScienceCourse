@@ -4,28 +4,26 @@ l=[2,3,4,5] #A list
 print(l)
 print(type(l))
 print()
-arr=np.array(l) #Converting a list to a numpy array
+arr=np.array(l) #Converting a list to a np array
 print(arr)
 print(type(arr))
 
-a=np.array([1,2,3,4]) #Numpy array has dimensions
+a=np.array([1,2,3,4]) #np array has dimensions
 b=np.array([[1,2,3,4],[5,6,7,8]])
 print(a.ndim)
 print(b.ndim)
 print(b.shape) #Will give you the rows and then the collumns
 
 # Python Program illustrating
-# numpy.zeros method
+# np.zeros method
  
-import numpy as geek
- 
-b = geek.zeros(2, dtype = int) #One dimension of two columns
+b = np.zeros(2, dtype = int) #One dimension of two columns
 print("Matrix b : \n", b)
  
-a = geek.zeros([2, 2], dtype = int) #Two dimensions of two columns
+a = np.zeros([2, 2], dtype = int) #Two dimensions of two columns
 print("\nMatrix a : \n", a)
  
-c = geek.ones([3, 3]) #Three dimensions with three columns
+c = np.ones([3, 3]) #Three dimensions with three columns
 print("\nMatrix c : \n", c)
 
 # output array
@@ -41,3 +39,36 @@ print("B\n", np.linspace(2.0, 3.0, num=5, retstep=True), "\n") #Start and end gi
 # To evaluate sin() in long range
 x = np.linspace(0, 2, 10)
 print("A\n", np.sin(x))
+
+maxC = np.max(c)
+print(maxC)
+
+minB = np.min(b)
+print(minB)
+
+# creating a two dimensional
+# np array of integers
+arr = np.array([[11, 2, 3],
+                     [4, 5, 16],
+                      [7, 81, 22]])
+ 
+# finding the maximum and
+# minimum element in the array
+max_element_column = np.max(arr, 0) #with 0 we speak about columns
+max_element_row = np.max(arr, 1)
+ 
+min_element_column = np.amin(arr, 0) #with 1 we speak about rows
+min_element_row = np.amin(arr, 1)
+ 
+# printing the result
+print('maximum elements in the columns of the array is:',
+      max_element_column)
+ 
+print('maximum elements in the rows of the array is:',
+      max_element_row)
+ 
+print('minimum elements in the columns of the array is:',
+      min_element_column)
+ 
+print('minimum elements in the rows of the array is:',
+      min_element_row)
