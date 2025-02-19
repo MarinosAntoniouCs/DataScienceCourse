@@ -35,3 +35,9 @@ print ("Output 1D Array filled with random floats : ", out_arr)
 print("A\n", np.arange(4).reshape(2, 2), "\n") #arange is like the range one , with the reshape you adjust rows/columns
 print("A\n", np.arange(4, 10), "\n")
 print("A\n", np.arange(4, 20, 3), "\n")#Third argument is for steps
+
+print("B\n", np.linspace(2.0, 3.0, num=5, retstep=True), "\n") #Start and end given , also number of items. by having retstep True you print step size
+ 
+# To evaluate sin() in long range
+x = np.linspace(0, 2, 10)
+print("A\n", np.sin(x))
