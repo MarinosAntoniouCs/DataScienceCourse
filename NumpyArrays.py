@@ -72,3 +72,35 @@ print('minimum elements in the columns of the array is:',
  
 print('minimum elements in the rows of the array is:',
       min_element_row)
+ 
+# sort each column indipendently
+a = np.array([[12, 15], [10, 1]])
+arr1 = np.sort(a, axis = 0)       
+print ("Along first axis : \n", arr1)       
+ 
+ 
+# sort each row indipendently
+a = np.array([[10, 15], [12, 1]])
+arr2 = np.sort(a, axis = -1)       
+print ("\nAlong first axis : \n", arr2)
+ 
+#array becomes 1D
+a = np.array([[12, 15], [10, 1]])
+arr1 = np.sort(a, axis = None)       
+print ("\nAlong none axis : \n", arr1)
+
+print("\nArrays stacked:\n")
+out_array = np.vstack((a , b))
+print(out_array)
+
+print("\n Arrays merges vertically\n")
+out_arr = np.hstack((a,a))
+print(out_arr)
+
+arr = np.arange(9.0).reshape(3, 3)
+
+print(arr) #the original 3D array
+
+gfg = np.vsplit(arr, 1) 
+  
+print (gfg) #splits it to its chunks
