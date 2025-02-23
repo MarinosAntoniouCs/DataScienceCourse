@@ -103,4 +103,25 @@ print(arr) #the original 3D array
 
 gfg = np.vsplit(arr, 1) 
   
-print (gfg) #splits it to its chunks
+print (gfg) #splits it to its chunks of 1 row
+
+arr = np.arange(16.0).reshape(4, 4)
+  
+gfg = np.hsplit(arr, 2)
+  
+print (gfg) #splits it into chuncks of 2 columns
+
+arr = np.array([1,2,3,4,5,6,7,8])
+print(arr[3: ]) #This formations prints from index 3 and after
+
+print(arr[ : -3]) #We could also start from the end and print the last 3
+print(arr[3  :  -3]) #or start from the 4th and finish at the last 4th
+
+arr = np.array([[1,2,3,4],[5,6,7,8],[8,7,6,5],[4,3,2,1]])
+
+print(arr[3 , 1]) #Accessing the [3,1] in the 2D array
+print()
+print(arr[ 1: , 1:]) #Start after the first row and after the first collumn
+
+lst = np.array([1,2,3,4,5,6,7,8,9,10]) #Start from the index 5 until the end to print instead of using for
+print(lst[lst>5]) #in a single line we have done the same thing which we did previously and this time without using the for loop
